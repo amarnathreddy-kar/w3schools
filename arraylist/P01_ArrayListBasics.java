@@ -1,6 +1,7 @@
 package arraylist;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class P01_ArrayListBasics {
 
@@ -11,7 +12,7 @@ public class P01_ArrayListBasics {
         System.out.println(cars);
 
         //to add elements to the ArrayList, use the add() method:
-        cars.add("Tiago");
+        cars.add("Tata Tiago");
         cars.add("Mahindra XUV500");
         cars.add("BMW 520D");
         cars.add("Ford Figo");
@@ -32,6 +33,21 @@ public class P01_ArrayListBasics {
         //To remove an element, use the remove() method and refer to the index number:
         cars.remove(cars.size()-2);
         System.out.println("After removing last but one element: "+cars);
+
+        //to print with for-each
+        for(String s : cars){
+            System.out.println(" '"+s+ "' element is at index of "+ cars.indexOf(s));
+        }
+        //with for loop
+        for(int i=0;i<cars.size();i++){
+            System.out.println(
+                    "for loop elements: "+cars.get(i)
+            );
+        }
+
+        //sorting an array list
+        Collections.sort(cars);
+        System.out.println("After sorting: "+cars);
 
         //To remove all the elements in the ArrayList, use the clear() method:
         cars.clear();
